@@ -4,6 +4,104 @@
   <meta charset="UTF-8">
   <title>Мой первый сайт</title>
   <style>
+    <head>
+  <meta charset="UTF-8">
+  <title>HackStart — первый хакатон</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #00000080;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #cbd5f5;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 14px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #38bdf8;
+      color: #020617;
+      transition: 0.3s;
+      box-shadow: 2px 2px 8px #00000050;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid #1e293b;
+      text-align: center;
+      box-shadow: 2px 2px 10px #00000050;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    input {
+      padding: 14px;
+      width: 100%;
+      margin-top: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+  </style>
+</head>
+
     body {
       font-family: Arial;
       background: #0f172a;
@@ -25,5 +123,26 @@
   <p>Это мой первый сайт</p>
   <button onclick="alert('Работает!')">Нажми</button>
 
+  <script>
+  function scrollToForm() {
+    document.getElementById("form").scrollIntoView({behavior: "smooth"});
+  }
+
+  function send() {
+    alert("🎉 Спасибо! Твоя заявка отправлена. Мы свяжемся с тобой!");
+  }
+</script>
+
+<section id="form">
+  <h2>Оставь заявку</h2>
+  <p>Мы подскажем хакатоны для новичков 👇</p>
+  <input type="text" placeholder="Твоё имя">
+  <input type="email" placeholder="Email">
+  <button class="btn" onclick="send()">Отправить</button>
+</section>
+
+
+
 </body>
 </html>
+
